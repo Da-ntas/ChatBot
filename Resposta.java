@@ -3,8 +3,6 @@ public abstract class Resposta{
   private String entrada;
   private String resposta;
   
-  
-  
   public Resposta(String entrada, String resposta){
     this.entrada = entrada;
     this.resposta = resposta;

@@ -1,13 +1,15 @@
 public class RespostaSimples extends Resposta{
 
-    public String entrada;
-    public String resposta; 
-    public String texto;
+    private String entrada;
+    private String resposta; 
+    private String texto;
 
     
     
     public RespostaSimples(String entrada, String resposta) {
       super(entrada, resposta);
+      this.entrada = entrada;
+      this.resposta = resposta;
     }
 
     @Override

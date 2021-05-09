@@ -1,9 +1,11 @@
 public class RespostaContador  extends Resposta{
-  public String entrada;
-  public String texto;  
+  private String entrada;
+  private String texto;
+  private int cont;
 
   public RespostaContador(String entrada){
     super(entrada, entrada);
+    //this.entrada = entrada;
   }
 
   @Override
@@ -17,6 +19,8 @@ public class RespostaContador  extends Resposta{
 
     @Override
     public String produz() {
-        return entrada;
+      this.cont++;
+      return "A contagem é: " + this.cont;
     }
+
 }

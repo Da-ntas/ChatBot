@@ -1,12 +1,13 @@
 import java.time.LocalDate;
 public class RespostaData extends Resposta{
 
-    public String entrada;
-    public String texto;
+    private String entrada;
+    private String texto;
     LocalDate Obj = LocalDate.now();
 
     public RespostaData(String entrada) {
       super(entrada, entrada);
+      //this.entrada = entrada;
     }
     
     @Override
