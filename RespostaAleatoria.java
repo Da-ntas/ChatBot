@@ -1,16 +1,31 @@
-public class RespostaAleatoria  extends Resposta{
-  public String entrada;
-  public String resposta;
-  public String texto;
+import java.util.Random;
+import java.util.ArrayList;
 
-  public RespostaAleatoria(String entrada, String resposta){
-    super(entrada, resposta);
+public class RespostaAleatoria  extends Resposta{
+  private String entrada;
+  private ArrayList<String> resposta;
+  private String texto;
+  private int selec;
+
+  public RespostaAleatoria(String entrada, ArrayList<String> resposta){
+    super(entrada, entrada);
+    this.entrada = entrada;
+    this.resposta = resposta;
+  }
+
+  public void selecionaRandom(){
+    Random gerador = new Random();
+
+    //imprime sequência de 10 números inteiros aleatórios entre 0 e 25
+    for (int i = 0; i < resposta.size(); i++) {
+      this.selec = gerador.nextInt(resposta.size());
+    }
   }
 
   @Override
     public boolean verifica(String texto){
         if (texto.contains(entrada)) {
-            return true;
+          return true;
         } else {
             return false;
         }
@@ -18,6 +33,12 @@ public class RespostaAleatoria  extends Resposta{
 
     @Override
     public String produz() {
-        return resposta;
+      selecionaRandom();
+      return resposta.get(selec);
+    }
+
+    @Override 
+    public String toString(){
+     return " "; 
     }
 }

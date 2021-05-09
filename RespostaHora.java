@@ -1,25 +1,32 @@
-import java.time.LocalTime;
+import java.time.*;
 public class RespostaHora extends Resposta{
 
-    public String entrada;
-    public String texto;
-    LocalTime Obj = LocalTime.now();
+    private String entrada;
+    private String texto;
+    ZoneId zid = ZoneId.of("America/Sao_Paulo");
+    LocalTime Obj = LocalTime.now(zid);
 
     public RespostaHora(String entrada) {
       super(entrada, entrada);
+      this.entrada = entrada;
 
     }
     @Override
     public boolean verifica(String texto){
         if (texto.contains(entrada)) {
+            
             return true;
         } else {
             return false;
         }
     }
-    @Override
     public String produz() {
-        return "São: " + Obj;
+      LocalTime Obj = LocalTime.now(zid);
+      return "São: " + Obj;
     }
 
+    @Override 
+    public String toString(){
+     return " "; 
+    }
 }
