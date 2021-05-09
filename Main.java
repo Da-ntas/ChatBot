@@ -1,35 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-/*public class Main {
-
-  public static void main(String[] args) {
-
-    RespostaSimples r = new RespostaSimples("nome", "Meus nome Ã© cu");
-        RespostaData t = new RespostaData("dia");
-        Scanner texto = new Scanner(System.in);
-        String frase;
-
-        while (true) {
-            System.out.print(">>");
-            frase = texto.nextLine();
-
-            if (r.verifica(frase)) {
-
-                System.out.println(r.produz());
-
-            } else {
-
-                System.out.println("Não serve");
-                texto.close();
-
-            }
-
-        }
-
-  }
-}*/
-
 public class Main {
 
   public static void main(String[] args) {
@@ -37,7 +8,7 @@ public class Main {
     Chatbot bot = new Chatbot ();
 
     // criando as respostas
-    Resposta rs1 = new RespostaSimples ("nome", " Meus amigos me chamam de AnhembiBot .");
+    Resposta rs1 = new RespostaSimples ("nome", " Meu nome é Wind !");
     Resposta rs2 = new RespostaData ("dia");
     Resposta rs3 = new RespostaHora ("hora");
     Resposta rs4 = new RespostaContador ("conta");
@@ -46,7 +17,10 @@ public class Main {
     ArrayList<String> piadas = new ArrayList<>();
     piadas.add(" Qual é o peixe baterista ? A truta !");
     piadas.add(" Qual é o peixe que cai do céu? Atum !");
-    Resposta rs5 = new RespostaAleatoria (" piada ", piadas );
+    piadas.add("Qual o estado que solta hadouken? O Ryu de Janeiro");
+    piadas.add("O que a polícia do Street Fighter faz? Honda");
+    piadas.add("Qual o game que está sempre gripado? O Overwatchim");
+    Resposta rs5 = new RespostaAleatoria ("piada", piadas );
 
     // adicionando as respostas ao chatbot
     bot.adiciona(rs1);

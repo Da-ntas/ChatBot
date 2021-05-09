@@ -8,21 +8,25 @@ public class RespostaHora extends Resposta{
 
     public RespostaHora(String entrada) {
       super(entrada, entrada);
-      //this.entrada = entrada;
+      this.entrada = entrada;
 
     }
     @Override
     public boolean verifica(String texto){
         if (texto.contains(entrada)) {
+            
             return true;
         } else {
             return false;
         }
     }
-    @Override
     public String produz() {
       LocalTime Obj = LocalTime.now(zid);
       return "São: " + Obj;
     }
 
+    @Override 
+    public String toString(){
+     return " "; 
+    }
 }

@@ -5,13 +5,13 @@ public class RespostaContador  extends Resposta{
 
   public RespostaContador(String entrada){
     super(entrada, entrada);
-    //this.entrada = entrada;
+    this.entrada = entrada;
   }
 
   @Override
     public boolean verifica(String texto){
         if (texto.contains(entrada)) {
-            return true;
+          return true;
         } else {
             return false;
         }
@@ -23,4 +23,8 @@ public class RespostaContador  extends Resposta{
       return "A contagem é: " + this.cont;
     }
 
+    @Override 
+    public String toString(){
+     return " "; 
+    }
 }

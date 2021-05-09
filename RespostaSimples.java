@@ -8,8 +8,8 @@ public class RespostaSimples extends Resposta{
     
     public RespostaSimples(String entrada, String resposta) {
       super(entrada, resposta);
-      this.entrada = entrada;
       this.resposta = resposta;
+      this.entrada = entrada;
     }
 
     @Override
@@ -24,6 +24,11 @@ public class RespostaSimples extends Resposta{
     @Override
     public String produz() {
         return resposta;
+    }
+
+    @Override 
+    public String toString(){
+      return " ";
     }
 
 }

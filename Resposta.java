@@ -9,7 +9,12 @@ public abstract class Resposta{
 
   }
   
-  public abstract boolean verifica(String entrada);
+  public abstract boolean verifica(String texto);
 
   public abstract String produz();
+
+  public String toString(){
+    return " ";
+  }
+  
 }

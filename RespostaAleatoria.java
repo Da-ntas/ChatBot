@@ -9,7 +9,7 @@ public class RespostaAleatoria  extends Resposta{
 
   public RespostaAleatoria(String entrada, ArrayList<String> resposta){
     super(entrada, entrada);
-    //this.entrada = entrada;
+    this.entrada = entrada;
     this.resposta = resposta;
   }
 
@@ -17,7 +17,7 @@ public class RespostaAleatoria  extends Resposta{
     Random gerador = new Random();
 
     //imprime sequência de 10 números inteiros aleatórios entre 0 e 25
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < resposta.size(); i++) {
       this.selec = gerador.nextInt(resposta.size());
     }
   }
@@ -25,7 +25,7 @@ public class RespostaAleatoria  extends Resposta{
   @Override
     public boolean verifica(String texto){
         if (texto.contains(entrada)) {
-            return true;
+          return true;
         } else {
             return false;
         }
@@ -37,4 +37,8 @@ public class RespostaAleatoria  extends Resposta{
       return resposta.get(selec);
     }
 
+    @Override 
+    public String toString(){
+     return " "; 
+    }
 }
